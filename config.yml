@@ -1,0 +1,42 @@
+# MoneyNotes Configuration
+
+# Tax rate applied to /withdraw and /pay commands (as a percentage)
+# 10 = 10% tax (default)
+tax-rate: 10.0
+
+# Minimum amount that can be withdrawn
+minimum-withdraw: 1.0
+
+# Minimum amount that can be paid
+minimum-pay: 1.0
+
+# Messages (use & for color codes)
+messages:
+  prefix: "&8[&6MoneyNotes&8]&r "
+  withdraw-success: "&aYou withdrew &2${amount}&a and paid &c${tax}&a in tax. Note created!"
+  withdraw-insufficient: "&cYou need &4${required}&c to withdraw &4${amount}&c (includes ${tax_rate}% tax)."
+  withdraw-invalid: "&cPlease specify a valid amount to withdraw."
+  withdraw-too-low: "&cMinimum withdrawal amount is &4${min}&c."
+  
+  pay-success: "&aYou paid &2${player} ${amount}&a and paid &c${tax}&a in tax."
+  pay-received: "&aYou received &2${amount}&a from &e{player}&a."
+  pay-insufficient: "&cYou need &4${required}&c to pay &4${amount}&c (includes ${tax_rate}% tax)."
+  pay-invalid: "&cPlease specify a valid amount to pay."
+  pay-too-low: "&cMinimum payment amount is &4${min}&c."
+  pay-player-not-found: "&cPlayer '{player}' not found."
+  pay-self: "&cYou cannot pay yourself."
+  
+  redeem-success: "&aYou redeemed a money note worth &2${amount}&a!"
+  
+  no-permission: "&cYou don't have permission to use this command."
+  economy-error: "&cEconomy system error. Please contact an administrator."
+
+# Note item configuration
+note-item:
+  material: PAPER
+  name: "&6&lMoney Note"
+  lore:
+    - "&7Value: &a${amount}"
+    - ""
+    - "&eRight-click to redeem"
+  enchanted: true  # Adds glowing effect

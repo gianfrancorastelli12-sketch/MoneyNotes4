@@ -1,0 +1,28 @@
+name: MoneyNotes
+version: 1.0.0
+main: com.moneynotes.MoneyNotesPlugin
+api-version: 1.21
+author: Claude
+description: Withdraw money into physical notes and pay players with a 10% tax
+depend: [Vault]
+
+commands:
+  withdraw:
+    description: Withdraw money into a physical note (10% tax)
+    usage: /withdraw <amount>
+    aliases: [wd]
+  paymoney:
+    description: Pay another player money (10% tax)
+    usage: /paymoney <player> <amount>
+    aliases: [pm]
+
+permissions:
+  moneynotes.withdraw:
+    description: Allows using /withdraw command
+    default: true
+  moneynotes.pay:
+    description: Allows using /paymoney command
+    default: true
+  moneynotes.admin:
+    description: Admin permissions for MoneyNotes
+    default: op
